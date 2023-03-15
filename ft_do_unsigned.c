@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_do_unsigned.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mshchuts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/15 14:53:54 by mshchuts          #+#    #+#             */
+/*   Updated: 2023/03/15 14:58:38 by mshchuts         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void    print_number(unsigned int n)
+void	do_number(unsigned int n)
 {
 	char	c;
 
 	if (n > 9)
 	{
-		print_number(n / 10);
-		print_number(n % 10);
+		do_number(n / 10);
+		do_number(n % 10);
 	}
 	else
 	{
@@ -23,7 +35,7 @@ int	ft_num_len(unsigned int n)
 	count = 0;
 	if (n == 0)
 		count++;
-	print_number(n);
+	do_number(n);
 	while (n != 0)
 	{
 		n /= 10;

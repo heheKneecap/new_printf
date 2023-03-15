@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_do_pointer.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mshchuts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/15 14:54:33 by mshchuts          #+#    #+#             */
+/*   Updated: 2023/03/15 14:59:12 by mshchuts         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_ptr_len(unsigned long long num)
@@ -29,7 +41,7 @@ void	ft_put_ptr(unsigned long long num)
 	}
 }
 
-int ft_do_pointer(unsigned long long ptr)
+int	ft_do_pointer(unsigned long long ptr)
 {
 	int	len;
 
