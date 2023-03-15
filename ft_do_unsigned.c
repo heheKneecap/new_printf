@@ -1,4 +1,6 @@
-const void	print_number(unsigned int n)
+#include "ft_printf.h"
+
+void    print_number(unsigned int n)
 {
 	char	c;
 

@@ -1,4 +1,6 @@
-const int	ft_ptr_len(unsigned long long num)
+#include "ft_printf.h"
+
+int	ft_ptr_len(unsigned long long num)
 {
 	unsigned int	len;
 
@@ -11,7 +13,7 @@ const int	ft_ptr_len(unsigned long long num)
 	return (len);
 }
 
-const void	ft_put_ptr(unsigned long long num)
+void	ft_put_ptr(unsigned long long num)
 {
 	if (num >= 16)
 	{
@@ -27,18 +29,18 @@ const void	ft_put_ptr(unsigned long long num)
 	}
 }
 
-int	ft_print_ptr(unsigned long long ptr)
+int ft_do_pointer(unsigned long long ptr)
 {
-	int	print_length;
+	int	len;
 
-	print_length = 0;
+	len = 0;
 	if (ptr == 0)
 	{
 		write (1, "(nil)", 5);
 		return (5);
 	}
-	print_length += write(1, "0x", 2);
+	len += write(1, "0x", 2);
 	ft_put_ptr(ptr);
-	print_length += ft_ptr_len(ptr);
-	return (print_length);
+	len += ft_ptr_len(ptr);
+	return (len);
 }

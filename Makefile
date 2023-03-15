@@ -1,10 +1,12 @@
 NAME = libftprintf.a
 
-SRC = 
+SRC = ft_printf.c ft_putchar_fd.c ft_strchr.c ft_do_hex.c \
+		ft_do_pointer.c ft_do_unsigned.c ft_putchar_fd.c \
+		ft_strchr.c ft_stuff.c ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 
-CC = gcc
+CC = cc
 
 CFLAGS = -c -Wall -Wextra -Werror
 

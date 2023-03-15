@@ -1,3 +1,5 @@
+#include "ft_printf.h"
+
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -10,7 +12,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	ft_printstr(char *str)
+int	ft_do_str(char *str)
 {
 	int	i;
 
@@ -28,19 +30,19 @@ int	ft_printstr(char *str)
 	return (i);
 }
 
-int	ft_printnbr(int n)
+int	ft_do_nbr(int n)
 {
 	int		len;
 	char	*num;
 
 	len = 0;
 	num = ft_itoa(n);
-	len = ft_printstr(num);
+	len = ft_do_str(num);
 	free(num);
 	return (len);
 }
 
-int	ft_printpercent(void)
+int	ft_do_percent(void)
 {
 	write(1, "%", 1);
 	return (1);

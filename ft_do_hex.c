@@ -1,4 +1,6 @@
-const int	ft_hex_len(unsigned	int num)
+#include "ft_printf.h"
+
+int	ft_hex_len(unsigned	int num)
 {
 	int	len;
 
@@ -11,7 +13,7 @@ const int	ft_hex_len(unsigned	int num)
 	return (len);
 }
 
-const void	ft_put_hex(unsigned int num, const char format)
+void	ft_put_hex(unsigned int num, const char format)
 {
 	if (num >= 16)
 	{
@@ -32,7 +34,7 @@ const void	ft_put_hex(unsigned int num, const char format)
 	}
 }
 
-int	ft_print_hex(unsigned int num, const char format)
+int	ft_do_hex(unsigned int num, const char format)
 {
 	if (num == 0)
 		return (write(1, "0", 1));
